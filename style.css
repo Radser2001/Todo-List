@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #232b2b;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form input:focus {
+  outline: none !important;
+  border: 1px solid #3366ff;
+}
+
+form button {
+  color: #3366ff;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #3366ff;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style-type: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: #fff;
+  color: #232b2b;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  /* background: #3366ff;
+  color: white; */
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  color: #fff;
+  background-color: #66ff33;
+}
+
+.trash-btn {
+  color: #fff;
+  background-color: #f30000;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition: all 0.4s ease;
+}
+
+select {
+  border: 0px;
+  outline: 0px;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  cursor: pointer;
+  color: #3366ff;
+  background: #fff;
+  padding: 1rem;
+  font-weight: 500;
+  width: 10rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #3366ff;
+  color: #fff;
+  top: 0;
+  padding: 10px;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after {
+  background: #fff;
+  color: #3366ff;
+}
+
+@media screen and (max-width: 700px) {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  input {
+    width: 50%;
+  }
+  .select {
+    width: 20%;
+  }
+  .filter-todo {
+    width: 10%;
+  }
+
+  form {
+    min-height: 20vh;
+  }
+}
